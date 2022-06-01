@@ -15,6 +15,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
+    // Borra lo que se muestra como resultado, operacion y variables regresan a cero. //
+    fun Clear (view: View) {
+        total = ""
+        operaciones = ""
+        findViewById<TextView>(R.id.tvResult).text = "Borrado"
+        findViewById<TextView>(R.id.tvOpertion).text = ""
+    }
+
     fun suma(view: View){
         // Guarda en variables su respectivo boton en tipo integer //
         var boton0 = findViewById<Button>(R.id.btnZero)
